@@ -1,0 +1,266 @@
+<html></html>
+<head>
+    <title>Bed Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            color: #333;
+        }
+        .tab.active {
+            border-bottom: 2px solid #007bff;
+            color: #007bff;
+        }
+        .filter-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .filter-container .view-toggle {
+            display: flex;
+            align-items: center;
+        }
+        .filter-container .view-toggle i {
+            font-size: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .filter-container .filter-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .checkbox {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <div class="tab active">All</div>
+            <div class="tab">Occupied</div>
+            <div class="tab">Available</div>
+            <div class="tab">ICU</div>
+            <div class="tab">General</div>
+        </div>
+        <div class="filter-container">
+            <div class="view-toggle">
+                <i class="fas fa-th-large"></i>
+                <i class="fas fa-list"></i>
+            </div>
+            <button class="filter-button">Filter</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th class="checkbox"><input type="checkbox"></th>
+                    <th>BED ID</th>
+                    <th>DEPARTMENT</th>
+                    <th>BED TYPE</th>
+                    <th>ROOM NO.</th>
+                    <th>STATUS</th>
+                    <th>ASSIGNED TO</th>
+                    <th>BED CONDITION</th>
+                    <th>AVAILABILITY DURATION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="checkbox"><input type="checkbox"></td>
+                    <td>B101</td>
+                    <td>ICU</td>
+                    <td>ICU</td>
+                    <td>101</td>
+                    <td>OCCUPIED</td>
+                    <td>John Doe</td>
+                    <td>GOOD</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td class="checkbox"><input type="checkbox"></td>
+                    <td>B102</td>
+                    <td>ICU</td>
+                    <td>ICU</td>
+                    <td>101</td>
+                    <td>AVAILABLE</td>
+                    <td>N/A</td>
+                    <td>GOOD</td>
+                    <td>15 MIN</td>
+                </tr>
+                <tr>
+                    <td class="checkbox"><input type="checkbox"></td>
+                    <td>B103</td>
+                    <td>GENERAL WARD</td>
+                    <td>GENERAL</td>
+                    <td>202</td>
+                    <td>OCCUPIED</td>
+                    <td>Janes Smith</td>
+                    <td>NEED CLEANING</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td class="checkbox"><input type="checkbox"></td>
+                    <td>B104</td>
+                    <td>GENERAL WARD</td>
+                    <td>GENERAL</td>
+                    <td>202</td>
+                    <td>AVAILABLE</td>
+                    <td>N/A</td>
+                    <td>GOOD</td>
+                    <td>20 MIN</td>
+                </tr>
+                <tr>
+                    <td class="checkbox"><input type="checkbox"></td>
+                    <td>B105</td>
+                    <td>PEDIATRICS</td>
+                    <td>PEDIATRIC ICU</td>
+                    <td>303</td>
+                    <td>AVAILABLE</td>
+                    <td>N/A</td>
+                    <td>GOOD</td>
+                    <td>10 MIN</td>
+                </tr>
+                <tr>
+                    <td class="checkbox"><input type="checkbox"></td>
+                    <td>B106</td>
+                    <td>SURGERY</td>
+                    <td>POST-OP</td>
+                    <td>404</td>
+                    <td>AVAILABLE</td>
+                    <td>Alex Johnson</td>
+                    <td>GOOD</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td class="checkbox"><input type="checkbox"></td>
+                    <td>B107</td>
+                    <td>MATERNITY</td>
+                    <td>MATERNITY</td>
+                    <td>505</td>
+                    <td>AVAILABLE</td>
+                    <td>N/A</td>
+                    <td>GOOD</td>
+                    <td>15 MIN</td>
+                </tr>
+                <tr>
+                    <td class="checkbox"><input type="checkbox"></td>
+                    <td>B108</td>
+                    <td>SURGERY</td>
+                    <td>SURGERY ICU</td>
+                    <td>404</td>
+                    <td>OCCUPIED</td>
+                    <td>Mia Lee</td>
+                    <td>NEED MAINTENANCE</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td class="checkbox"><input type="checkbox"></td>
+                    <td>B109</td>
+                    <td>GENERAL WARD</td>
+                    <td>GENERAL</td>
+                    <td>202</td>
+                    <td>AVAILABLE</td>
+                    <td>N/A</td>
+                    <td>GOOD</td>
+                    <td>30 MIN</td>
+                </tr>
+                <tr>
+                    <td class="checkbox"><input type="checkbox"></td>
+                    <td>B110</td>
+                    <td>MATERNITY</td>
+                    <td>NEONATAL ICU</td>
+                    <td>506</td>
+                    <td>OCCUPIED</td>
+                    <td>Olivia Harris</td>
+                    <td>GOOD</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td class="checkbox"><input type="checkbox"></td>
+                    <td>B111</td>
+                    <td>EMERGENCY</td>
+                    <td>EMERGENCY BED</td>
+                    <td>100</td>
+                    <td>AVAILABLE</td>
+                    <td>N/A</td>
+                    <td>GOOD</td>
+                    <td>5 MIN</td>
+                </tr>
+                <tr>
+                    <td class="checkbox"><input type="checkbox"></td>
+                    <td>B112</td>
+                    <td>SURGERY</td>
+                    <td>SURGERY ICU</td>
+                    <td>403</td>
+                    <td>AVAILABLE</td>
+                    <td>N/A</td>
+                    <td>GOOD</td>
+                    <td>30 MIN</td>
+                </tr>
+                <tr>
+                    <td class="checkbox"><input type="checkbox"></td>
+                    <td>B113</td>
+                    <td>GENERAL WARD</td>
+                    <td>GENERAL</td>
+                    <td>203</td>
+                    <td>OCCUPIED</td>
+                    <td>Henry Adams</td>
+                    <td>NEED CLEANING</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td class="checkbox"><input type="checkbox"></td>
+                    <td>B114</td>
+                    <td>ICU</td>
+                    <td>ICU</td>
+                    <td>102</td>
+                    <td>AVAILABLE</td>
+                    <td>N/A</td>
+                    <td>GOOD</td>
+                    <td>20 MIN</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

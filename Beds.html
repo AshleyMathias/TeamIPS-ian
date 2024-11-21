@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Data</title>
+    <link rel="stylesheet" href="css\Beds.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hospital Information</h1>
+        <div class="filters">
+            <select id="ratingFilter">
+                <option value="">Select Rating</option>
+                <option value="1">1 Star</option>
+                <option value="2">2 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="5">5 Stars</option>
+            </select>
+
+            <input type="text" id="locationFilter" placeholder="Enter Location">
+            <button id="filterButton">Filter</button>
+        </div>
+        <div id="hospital-list" class="hospital-list"></div>
+    </div>
+
+    <script type="module">
+        import { db, collection, getDocs } from './js/firebase.js';
+
+        let hospitalData = []; // To store fetched hospital data
+
+        async function fetchHospitalData() {
+            try {
+                const hospitalCollection = collection(db, 'hospitals');
+                const snapshot = await getDocs(hospitalCollection);
+                const hospitalList = document.getElementById("hospital-list");
+
+                snapshot.forEach((doc) => {
+                    const data = doc.data();
+                    hospitalData.push(data); // Store each hospital's data in the array
+                    displayHospital(data); // Display the hospital data
+                });
+            } catch (error) {
+                console.error("Error fetching hospitals: ", error);
+            }
+        }
+
+        // Function to display a single hospital
+        function displayHospital(data) {
+            const hospitalList = document.getElementById("hospital-list");
+            const hospitalCard = document.createElement("div");
+            hospitalCard.classList.add("hospital-card");
+            hospitalCard.innerHTML = `
+                <div class="card-content">
+                    <h2>${data.name}</h2>
+                    <p><strong>Location:</strong> ${data.location}</p>
+                    <p><strong>Rating:</strong> ${data.rating}</p>
+                    <p><strong>Total Beds:</strong> ${data.totalBeds}</p>
+                    <p><strong>Available Beds:</strong> ${data.availableBeds}</p>
+                    <p><strong>Occupied Beds:</strong> ${data.occupiedBeds}</p>
+                    <p><strong>Beds Under Maintenance:</strong> ${data.bedsUnderMaintenance}</p>
+                </div>
+                <img src="path/to/your/logo.png" alt="${data.name} Logo" class="hospital-logo">
+            `;
+            hospitalList.appendChild(hospitalCard);
+        }
+
+        // Function to filter and display hospitals based on rating and location
+        function filterData() {
+            const rating = document.getElementById("ratingFilter").value;
+            const location = document.getElementById("locationFilter").value.toLowerCase();
+
+            // Clear previous results
+            document.getElementById("hospital-list").innerHTML = '';
+
+            // Filter data based on user input
+            hospitalData.forEach(data => {
+                const matchesRating = rating ? data.rating === Number(rating) : true;
+                const matchesLocation = location ? data.location.toLowerCase().includes(location) : true;
+
+                if (matchesRating && matchesLocation) {
+                    displayHospital(data); // Display filtered hospitals
+                }
+            });
+        }
+
+        // Call the fetch function
+        fetchHospitalData();
+
+        // Add event listener to the filter button
+        document.getElementById("filterButton").addEventListener("click", filterData);
+    </script>
+    
+</body>
+</html>

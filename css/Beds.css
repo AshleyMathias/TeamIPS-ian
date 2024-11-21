@@ -1,0 +1,67 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f4f8;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.hospital-list {
+    display: flex;
+    flex-direction: column; /* Stacks cards vertically */
+    gap: 20px; /* Space between cards */
+}
+
+.hospital-card {
+    display: flex; /* Use flexbox for horizontal layout */
+    align-items: center; /* Center items vertically */
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hospital-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    flex: 1; /* Allow content to take available space */
+}
+
+.hospital-logo {
+    width: 80px; /* Set a fixed width for the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 20px; /* Space between content and logo */
+}
+
+.hospital-card h2 {
+    margin: 0 0 10px;
+    color: #007bff;
+}
+
+.hospital-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+strong {
+    color: #333;
+}

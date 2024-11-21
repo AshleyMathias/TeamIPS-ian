@@ -1,0 +1,311 @@
+<html></html>
+<head>
+    <title>Doctor Directory</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        
+        .header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        .container {
+            padding: 20px;
+        }
+    }
+        .doctor-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .doctor {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .doctor:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .doctor img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .doctor-info {
+            flex-grow: 1;
+        }
+        .doctor-info h4 {
+            margin: 0 0 5px;
+        }
+        .doctor-info p {
+            margin: 5px 0;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .buttons button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            width: 200px;
+        }
+        .buttons button:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            background-color: #1e73be;
+            color: white;
+            padding: 40px 0;
+        }
+        .footer .container {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer .container div {
+            flex: 1;
+            padding: 0 20px;
+        }
+        .footer h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .footer h3::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 2px;
+            background-color: white;
+            margin-top: 5px;
+        }
+        .footer p, .footer ul, .footer li {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer ul li {
+            margin-bottom: 10px;
+        }
+        .footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer ul li a:hover {
+            text-decoration: underline;
+        }
+        .footer .social-icons {
+            margin-top: 20px;
+        }
+        .footer .social-icons a {
+            color: white;
+            margin-right: 10px;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        .footer .newsletter input[type="email"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            width: calc(100% - 60px);
+            box-sizing: border-box;
+        }
+        .footer .newsletter button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0073e6;
+            color: white;
+            cursor: pointer;
+        }
+        .footer .newsletter button i {
+            margin-left: 5px;
+        }
+        .footer .copyright {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .footer .copyright a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header" style="display: flex; justify-content: center;">
+        <h1>Available Doctors</h1>
+    </div>    
+   
+    <div class="container">
+        <div class="doctor-list">
+            <div class="doctor">
+                <img alt="Doctor Umang Shihora" height="100" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-BVbpSZmLndA7MfHIxv2ahIKS/user-IBY8IaMXtVn7IVIdZeyvjx16/img-C1fDWNtLYdcPVvIOwJWzSoL8.png?st=2024-09-14T19%3A36%3A27Z&amp;se=2024-09-14T21%3A36%3A27Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-13T23%3A13%3A11Z&amp;ske=2024-09-14T23%3A13%3A11Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=1LDEC4PZZkbZ%2BncKSVQ2R0R6eT4vWswh4tz4b28i2sY%3D" width="100"/>
+                <div class="doctor-info">
+                    <h4>Dr. Umang Shihora</h4>
+                    <p>MBBS MS Orthopaedics</p>
+                    <p>Speciality: Orthopaedics &amp; Joint Replacement, Orthopedist</p>
+                    <p>Location: Rajkot</p>
+                    <p>Year Of Experience: 12 Years</p>
+                </div>
+                <div class="buttons">
+                    <button>Book An Appointment</button>
+                </div>
+            </div>
+            <div class="doctor">
+                <img alt="Doctor Chirag Matravadia" height="100" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-BVbpSZmLndA7MfHIxv2ahIKS/user-IBY8IaMXtVn7IVIdZeyvjx16/img-fQKrvUFi3w8hOwUMhwu2vSqV.png?st=2024-09-14T 19%3A38%3A28Z&amp;se=2024-09-14T21%3A38%3A28Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-13T23%3A11%3A41Z&amp;ske=2024-09-14T23%3A11%3A41Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=2Q5%2BIxzXdlmPoJaW7o9Myee6t19jqYi2Hs0SdG9VQf0%3D" width="100"/>
+                <div class="doctor-info">
+                    <h4>Dr. Chirag Matravadia</h4>
+                    <p>MBBS MD Medicine</p>
+                    <p>Speciality: Critical Care, Diabetology, Internal Medicine</p>
+                    <p>Location: Rajkot</p>
+                    <p>Year Of Experience: 25 Years</p>
+                </div>
+                <div class="buttons">
+                    <button>Book An Appointment</button>
+                </div>
+            </div>
+            <div class="doctor">
+                <img alt="Doctor Alpesh Kikani" height="100" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-BVbpSZmLndA7MfHIxv2ahIKS/user-IBY8IaMXtVn7IVIdZeyvjx16/img-ka6bcsD9GVyMd0hwZYazWn8O.png?st=2024-09-14T19%3A36%3A23Z&amp;se=2024-09-14T21%3A36%3A23Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-13T23%3A20%3A27Z&amp;ske=2024-09-14T23%3A20%3A27Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=/WJbr%2BzyHKNDGKc8etD5BIEKzPYXQQ37PfFgG06ui7s%3D" width="100"/>
+                <div class="doctor-info">
+                    <h4>Dr. Alpesh Kikani</h4>
+                    <p>MBBS MD DM Medical Oncology</p>
+                    <p>Speciality: Oncology</p>
+                    <p>Location: Rajkot</p>
+                    <p>Year Of Experience: 7 Years</p>
+                </div>
+                <div class="buttons">
+                    <button>Book An Appointment</button>
+                </div>
+            </div>
+            <div class="doctor">
+                <img alt="Doctor Gautam Makadiya" height="100" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-BVbpSZmLndA7MfHIxv2ahIKS/user-IBY8IaMXtVn7IVIdZeyvjx16/img-iVCzcEn3BNmiIGUeG7LvqOQU.png?st=2024-09-14T19%3A36%3A23Z&amp;se=2024-09-14T21%3A36%3A23Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-13T23%3A26%3A19Z&amp;ske=2024-09-14T23%3A26%3A19Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=npZq7ryvIF5i00dSHYH3IwNhywB%2BCQZvCedDxViDoyU%3D" width="100"/>
+                <div class="doctor-info">
+                    <h4>Dr. Gautam Makadiya</h4>
+                    <p>MBBS MD DM Medical Oncology</p>
+                    <p>Speciality: Oncology</p>
+                    <p>Location: Rajkot</p>
+                    <p>Year Of Experience: 7 Years</p>
+                </div>
+                <div class="buttons">
+                    <button>Book An Appointment</button>
+                </div>
+            </div>
+            <div class="doctor">
+                <img alt="Doctor Rajesh Ganatra" height="100 " src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-BVbpSZmLndA7MfHIxv2ahIKS/user-IBY8IaMXtVn7IVIdZeyvjx16/img-ZaOGsUBTBf7bWjksAmV8r204.png?st=2024-09-14T19%3A36%3A24Z&amp;se=2024-09-14T21%3A36%3A24Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-13T23%3A22%3A10Z&amp;ske=2024-09-14T23%3A22%3A10Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=abGTOTuErj8P/CoufCizhtRP1DTw3xPVmU6UcTCYefs%3D" width="100"/>
+                <div class="doctor-info">
+                    <h4>Dr. Rajesh Ganatra</h4>
+                    <p>MBBS MS General Surgery DNB Urology</p>
+                    <p>Speciality: Urology</p>
+                    <p>Location: Rajkot</p>
+                    <p>Year Of Experience: 25 Years</p>
+                </div>
+                <div class="buttons">
+                    <button>Book An Appointment</button>
+                </div>
+            </div>
+            <div class="doctor">
+                <img alt="Doctor Nayan Timbadiya" height="100" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-BVbpSZmLndA7MfHIxv2ahIKS/user-IBY8IaMXtVn7IVIdZeyvjx16/img-oOGcyW4MXRUuNF0AGSCdGt4A.png?st=2024-09-14T19%3A36%3A26Z&amp;se=2024-09-14T21%3A36%3A26Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-13T23%3A16%3A16Z&amp;ske=2024-09-14T23%3A16%3A16Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=86cMtyvMhr2l%2Brfoo93%2B5dv3GFdBRyIf1t3J3N0AXyI%3D" width="100"/>
+                <div class="doctor-info">
+                    <h4>Dr. Nayan Timbadiya</h4>
+                    <p>MBBS MS General Surgery DNB Urology</p>
+                    <p>Speciality: Urology</p>
+                    <p>Location: Rajkot</p>
+                    <p>Year Of Experience: 5 Years</p>
+                </div>
+                <div class="buttons">
+                    <button>Book An Appointment</button>
+                </div>
+            </div>
+            <div class="doctor">
+                <img alt="Doctor Sunil Bansode" height="100" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-BVbpSZmLndA7MfHIxv2ahIKS/user-IBY8IaMXtVn7IVIdZeyvjx16/img-c0YvwgDldnhamfM94bUNrcva.png?st=2024-09-14T19%3A41%3A36Z&amp;se=2024-09-14T21%3A41%3A36Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-13T23%3A41%3A38Z&amp;ske=2024-09-14T23%3A41%3A38Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=tshZ0ekDCDCnfYbQpEGcOuAkgzdR2X5bCXaIe9E1IP0%3D" width="100"/>
+                <div class="doctor-info">
+                    <h4>Dr. Sunil Bansode</h4>
+                    <p>MBBS MS General Surgery FIAGS Minimal</p>
+                    <p>Speciality: Colorectal Surgery, General Surgery, General Surgeon, General Surgery &amp; Laparoscopic Surgery</p>
+                    <p>Location: Rajkot</p>
+                    <p>Year Of Experience: 10 Years</p>
+                </div>
+                <div class="buttons">
+                    <button>Book An Appointment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div>
+                <h3>About Us</h3>
+                <p>Lorem ipsum dolor sit am consectetur adipisicing elit do eiusmod tempor incididunt ut labore dolore magna.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Our Cases</a></li>
+                    <li><a href="#">Other Links</a></li>
+                    <li><a href="#">Consulting</a></li>
+                    <li><a href="#">Finance</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Open Hours</h3>
+                <p>Lorem ipsum dolor sit ame consectetur adipisicing elit do eiusmod tempor incididunt.</p>
+                <p>Monday - Friday <span style="float: right;">8.00-20.00</span></p>
+                <p>Saturday <span style="float: right;">9.00-18.30</span></p>
+                <p>Monday - Thursday <span style="float: right;">9.00-15.00</span></p>
+            </div>
+            <div>
+                <h3>Newsletter</h3>
+                <p>subscribe to our newsletter to get allour news in your inbox.. Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+                <div class="newsletter">
+                    <input type="email" placeholder="Email Address">
+                    <button><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<html></html>
+<head>
+    <title>Hospital Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        .header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: #007acc;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            background-color: #005b99;
+            margin-right: 20px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .box {
+            width: 250px;
+            height: 150px;
+            border: 2px solid #007acc;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #e6f7ff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background-color: #007acc;
+            color: #fff;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 0;
+            background-color: #1E73BE;
+            color: white;
+        }
+
+        .footer-column {
+            width: 20%;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 2px;
+            background-color: white;
+            margin-top: 5px;
+        }
+
+        .footer-column p, .footer-column ul, .footer-column li {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-column ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-column .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .footer-column .social-icons a {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .footer-column .newsletter input[type="email"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .footer-column .newsletter button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: white;
+            color: #1E73BE;
+            cursor: pointer;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #1C6EA4;
+        }
+
+        .footer-bottom a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-bottom p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            Hospital Logo
+        </div>
+        <div class="title">
+            MY Hospital
+        </div>
+    </div>
+    <div class="content">
+        <div class="box">
+            Active Patient Value
+            <a href="activeuser.html" class="btn">( Access )</a>
+        </div>
+        <div class="box">
+            Appointments
+            <a href="appointment.html" class="btn">( Access )</a>
+        </div>
+        <div class="box">
+            Beds Availability
+            <a href="bedavailabilty.html" class="btn">( Access )</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-column">
+            <h3>Paramedy</h3>
+            <p>"Efficient Hospital Managment, Better Patient Care".</p>
+            
+        </div>
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Our Cases</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Open Hours</h3>
+            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit do eiusmod tempor incididunt.</p>
+            <p>Monday - Friday 8.00-20.00</p>
+            <p>Saturday 9.00-18.30</p>
+            <p>Monday - Thursday 9.00-15.00</p>
+        </div>
+        <div class="footer-column">
+            <h3>To Connect with Paramedy</h3>
+            <div class="newsletter">
+                <input type="email" placeholder="Email Address"><button><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© Copyright 2018 | All Rights Reserved by <a href="#">wpthemesgrid.com</a></p>
+    </div>
+</body>
+</html>
